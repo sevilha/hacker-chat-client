@@ -15,8 +15,6 @@ export default class EventManager {
     this.componentEmitter.on(constants.events.app.MESSAGE_SENT, msg => {
       this.socketClient.sendMessage(constants.events.socket.MESSAGE, msg);
     });
-
-
   }
 
   updateUsers(users) {
@@ -46,7 +44,7 @@ export default class EventManager {
     )
   }
 
-  disconectUser(user) {
+  disconnectUser(user) {
     const { userName, id } = user;
     this.#allUsers.delete(id);
 
